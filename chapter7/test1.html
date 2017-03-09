@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>this</title>
+	<script type="text/javascript">
+		window.onload=function(){
+			var p = document.createElement("p");
+			var text1 = document.createTextNode("this is");
+			var em = document.createElement("em");
+			var text2 = document.createTextNode("my");
+			var text3 = document.createTextNode("book");
+			p.appendChild(text1);
+			em.appendChild(text2);
+			p.appendChild(em);
+			p.appendChild(text3);
+			var body1 = document.getElementsByTagName("body")[0];
+			body1.appendChild(p);
+		}
+	</script>
+</head>
+<body id="body">
+
+</body>
+</html>
