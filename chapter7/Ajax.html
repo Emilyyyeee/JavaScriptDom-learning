@@ -17,6 +17,22 @@
 		}
 		return new XMLHttpRequest();
 	}
+	window.onload = function(){
+		var request = getHTTPObject();
+		if(request){
+			request.open("GET","test.txt",true);
+			request.onreadystatechange = function(){
+				if(request.readyState == 4){
+					alert(request.responseText);
+				}
+			}
+			request.send(null);
+		}
+		else
+		{
+			alert("sorry");
+		}
+	}
 	</script>
 </head>
 <body>
